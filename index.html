@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gurukul Canteen Management</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Gurukul Canteen Management</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#student-section">Students</a></li>
+      <li><a href="#worker-section">Workers</a></li>
+      <li><a href="#vendor-section">Vendors</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    
+    <!-- Student Section -->
+    <section id="student-section">
+      <hgroup>
+        <h2>Student Details</h2>
+        <h3>Manage daily sales and transactions</h3>
+      </hgroup>
+      
+      <!-- Add Student Form -->
+      <form class="grid">
+        <input type="text" id="student-name" name="student-name" placeholder="Student Name" required>
+        <input type="text" id="student-class" name="student-class" placeholder="Class" required>
+        <input type="text" id="guardian-name" name="guardian-name" placeholder="Guardian Name" required>
+        <input type="tel" id="contact" name="contact" placeholder="Contact Number" required>
+        <input type="tel" id="alternate-contact" name="alternate-contact" placeholder="Alternate Contact" required>
+        <textarea id="address" name="address" placeholder="Address" required></textarea>
+        <input type="file" id="student-image" name="student-image" accept="image/*" required>
+        <button type="submit">Add Student</button>
+      </form>
+
+      <!-- Display Student Profiles -->
+      <div class="grid">
+        <section class="student-profile">
+          <h3>Student Name</h3>
+          <figure>
+            <img src="student-image.jpg" alt="Student Image" />
+            <figcaption>Verification Image</figcaption>
+          </figure>
+          <p>Class: 10</p>
+          <p>Guardian Name: John Doe</p>
+          <p>Contact: +91 9876543210</p>
+          <p>Address: XYZ Street, City</p>
+          
+          <!-- Transaction Records -->
+          <h4>Transaction Records</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Amount Debit</th>
+                <th>Amount Credit</th>
+                <th>Total Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-01-19</td>
+                <td>₹50</td>
+                <td>₹30</td>
+                <td>₹20</td>
+              </tr>
+              <!-- More transactions here -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </section>
+
+    <!-- Worker Section -->
+    <section id="worker-section">
+      <hgroup>
+        <h2>Worker Salary Records</h2>
+        <h3>Track payments and salary distribution</h3>
+      </hgroup>
+      
+      <!-- Add Worker Form -->
+      <form class="grid">
+        <input type="text" id="worker-name" name="worker-name" placeholder="Worker Name" required>
+        <input type="number" id="worker-salary" name="worker-salary" placeholder="Salary" required>
+        <input type="number" id="amount-paid" name="amount-paid" placeholder="Amount Paid" required>
+        <button type="submit">Add Worker</button>
+      </form>
+
+      <!-- Display Worker Records -->
+      <div class="grid">
+        <section class="worker-record">
+          <h3>Worker Name</h3>
+          <p>Salary: ₹15000</p>
+          <p>Amount Paid: ₹10000</p>
+          <p>Remaining: ₹5000</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- Vendor Section -->
+    <section id="vendor-section">
+      <hgroup>
+        <h2>Vendor Purchase Records</h2>
+        <h3>Track purchases and payments</h3>
+      </hgroup>
+      
+      <!-- Add Vendor Form -->
+      <form class="grid">
+        <input type="text" id="vendor-name" name="vendor-name" placeholder="Vendor Name" required>
+        <input type="text" id="vendor-item" name="vendor-item" placeholder="Item Purchased" required>
+        <input type="number" id="amount-paid-to-vendor" name="amount-paid-to-vendor" placeholder="Amount Paid" required>
+        <button type="submit">Add Vendor</button>
+      </form>
+
+      <!-- Display Vendor Records -->
+      <div class="grid">
+        <section class="vendor-record">
+          <h3>Vendor Name</h3>
+          <p>Item: Rice</p>
+          <p>Amount Paid: ₹5000</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- Grand Total Section -->
+    <section id="grand-total">
+      <hgroup>
+        <h2>Grand Total Sales</h2>
+        <h3>Overview of total sales for the day</h3>
+      </hgroup>
+      <p>Total Sales: ₹10000</p>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section aria-label="Subscribe example">
+      <div class="container">
+        <article>
+          <hgroup>
+            <h2>Stay Updated</h2>
+            <h3>Subscribe for the latest updates</h3>
+          </hgroup>
+          <form class="grid">
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+          </form>
+        </article>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+  </footer>
+
+</body>
+</html>
